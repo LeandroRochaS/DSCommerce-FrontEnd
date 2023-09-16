@@ -1,0 +1,7 @@
+@import "../../styles/variables.scss";
+
+.dsc-btn-white {
+  background-color: $dsc-color-btn-inverse; // Use as variáveis
+  color: $dsc-color-btn-primary; // Use as variáveis
+  border: 1px solid $dsc-color-btn-primary; // Use as variáveis
+}

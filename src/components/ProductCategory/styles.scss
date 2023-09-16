@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.dsc-card-category {
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: $dsc-color-bg-tertiary;
+  height: 30px;
+  font-weight: 700;
+  color: $dsc-color-card-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}

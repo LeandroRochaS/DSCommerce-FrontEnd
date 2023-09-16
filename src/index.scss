@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
-@import "variables"; // Importe o arquivo de variáveis
+@import "./styles/variables.scss"; // Importe o arquivo de variáveis
 
 * {
   box-sizing: border-box;
@@ -32,7 +32,7 @@ body {
 
 .dsc-container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -51,19 +51,10 @@ body {
 /* header styles */
 
 header {
-  background-color: $dsc-color-bg-secondary;
   height: 70px;
   display: flex;
   align-items: center;
   padding: 0 20px;
-}
-
-.dsc-header-client {
-  background-color: $dsc-color-bg-secondary;
-  color: $dsc-color-font-primary;
-  a {
-    color: $dsc-color-font-primary;
-  }
 }
 
 .dsc-header-admin {
@@ -172,19 +163,6 @@ main {
 
 .dsc-btn:hover {
   opacity: 0.7;
-}
-
-.dsc-btn-blue {
-  border: none;
-
-  background-color: $dsc-color-btn-primary; // Use as variáveis
-  color: $dsc-color-btn-inverse; // Use as variáveis
-}
-
-.dsc-btn-white {
-  background-color: $dsc-color-btn-inverse; // Use as variáveis
-  color: $dsc-color-btn-primary; // Use as variáveis
-  border: 1px solid $dsc-color-btn-primary; // Use as variáveis
 }
 
 /* Search styles */

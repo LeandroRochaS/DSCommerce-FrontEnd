@@ -1,0 +1,10 @@
+@import "../../styles/variables.scss";
+
+.dsc-header-client {
+  background-color: $dsc-color-bg-secondary;
+  color: $dsc-color-font-primary;
+
+  a {
+    color: $dsc-color-font-primary;
+  }
+}
