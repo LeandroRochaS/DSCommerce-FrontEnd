@@ -1,10 +1,11 @@
+import { CategoryDTO } from "../../models/category";
 import "./styles.scss";
 
-export default function ProductCategory(props: { text: string }) {
-  const { text } = props;
+export default function ProductCategory(props: { category: CategoryDTO }) {
+  const { category } = props;
   return (
     <>
-      <div className="dsc-card-category">{text}</div>
+      <div className="dsc-card-category">{category.name}</div>
     </>
   );
 }

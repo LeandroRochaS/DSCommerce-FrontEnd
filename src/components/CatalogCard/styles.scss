@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.dsc-catalog-card-top {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.dsc-catalog-card-bottom {
+  padding: 10px 20px;
+  min-width: 110px;
+
+  h3 {
+    font-size: 20px;
+    color: $dsc-color-font-secondary;
+  }
+
+  h4 {
+    color: $dsc-color-font-primary;
+    font-size: 12px;
+  }
+}
