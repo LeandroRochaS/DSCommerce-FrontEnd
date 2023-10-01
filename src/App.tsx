@@ -11,7 +11,10 @@ function App() {
         <Route path="/" element={<ClientHome />}>
           <Route index element={<Catalog />} />
           <Route path="catalog" element={<Catalog />} />
-          <Route path="product-details" element={<ProductDetails />} />
+          <Route
+            path="product-details/:productIdString"
+            element={<ProductDetails />}
+          />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

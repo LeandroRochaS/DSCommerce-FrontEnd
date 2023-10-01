@@ -32,12 +32,17 @@ body {
 
 .dsc-container {
   width: 100%;
-  max-width: 960px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
 .dsc-text-left {
   text-align: left;
+}
+
+.dsc-link {
+  outline: none;
+  text-decoration: none;
 }
 
 @media (min-width: 576px) {

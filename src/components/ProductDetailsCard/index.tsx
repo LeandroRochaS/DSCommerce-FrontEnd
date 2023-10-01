@@ -3,7 +3,7 @@ import ProductCategory from "../ProductCategory";
 import { ProductDTO } from "../../models/product";
 
 export default function ProductDetailsCard(props: { product: ProductDTO }) {
-  const { id, name, price, imgUrl, description, categories } = props.product;
+  const { name, price, imgUrl, description, categories } = props.product;
   return (
     <>
       <div className="dsc-card dsc-mb-20">

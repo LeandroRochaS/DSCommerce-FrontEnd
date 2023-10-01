@@ -6,6 +6,8 @@
   padding: 10px;
 
   img {
+    object-fit: contain;
+
     width: 150px;
     height: 150px;
   }
@@ -14,6 +16,7 @@
 .dsc-catalog-card-bottom {
   padding: 10px 20px;
   min-width: 110px;
+  height: 90px;
 
   h3 {
     font-size: 20px;

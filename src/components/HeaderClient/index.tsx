@@ -14,10 +14,14 @@ export default function HeaderClient() {
             <div className="dsc-navbar-right">
               <div className="dsc-menu-items-container">
                 <div className="dsc-menu-item">
-                  <img alt="Carrinho" src={cartIcon} />
+                  <Link to={"/cart"}>
+                    <img alt="Carrinho" src={cartIcon} />
+                  </Link>
                 </div>
-              </div>{" "}
-              <a> Entrar</a>{" "}
+              </div>
+              <Link to={"/login"}>
+                <a> Entrar</a>
+              </Link>
             </div>
           </div>
         </nav>
