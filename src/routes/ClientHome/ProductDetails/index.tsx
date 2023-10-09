@@ -1,14 +1,29 @@
 import ProductDetailsCard from "../../../components/ProductDetailsCard";
 import ButtonPrimary from "../../../components/ButtonPrimary";
 import ButtonInverse from "../../../components/ButtonInverse";
-import * as productService from "../../../services/product-service";
 import "./styles.scss";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { ProductDTO } from "../../../models/product";
+import * as productService from "../../../services/product-service";
 
 export default function ProductDetails() {
   const { productIdString } = useParams();
-  const product = productService.findById(Number(productIdString));
+  const [product, setProduct] = useState<ProductDTO>();
+
+  useEffect(() => {
+    if (!productIdString) return;
+    productService
+      .findById(productIdString)
+      .then((response) => {
+        setProduct(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error("Error na requisição:", error);
+      });
+  }, [productIdString]);
 
   return (
     <>

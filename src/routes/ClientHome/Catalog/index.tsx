@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ProductDTO } from "../../../models/product";
-import * as productService from "../../../services/product-service";
 import ButtonNextPage from "../../../components/ButtonNextPage";
 import CatalogCard from "../../../components/CatalogCard";
 import SearchBar from "../../../components/SearchBar";
 import "./styles.scss";
-
+import * as productService from "../../../services/product-service";
 export default function Catalog() {
   const [products, setProducts] = useState<ProductDTO[]>([]);
 
   useEffect(() => {
-    setProducts(productService.findAll());
+    productService
+      .findAll()
+      .then((response) => setProducts(response.data.content))
+      .catch((err) => console.error(err));
   }, []);
 
   return (
