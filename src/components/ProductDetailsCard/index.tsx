@@ -17,7 +17,7 @@ export default function ProductDetailsCard(props: { product: ProductDTO }) {
           <p>{description}</p>
           <div className="dsc-card-tags">
             {categories.map((category) => (
-              <ProductCategory category={category} />
+              <ProductCategory key={category.id} category={category} />
             ))}
           </div>
         </div>
